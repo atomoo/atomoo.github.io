@@ -31,3 +31,8 @@ cache:
 env:
  global:
    - GH_REF=github.com:atomoo/atomoo.github.io.git
+
+notifications:
+  email:
+    on_success: never # default: change
+    on_failure: always # default: always
