@@ -1,0 +1,33 @@
+language: node_js
+
+node_js:
+  - "node"
+
+install:
+  - npm install
+
+script:
+  - npm run clean
+  - npm run generate
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: ${GH_TOKEN}
+  keep-history: true
+  local_dir: public
+  target-branch: master
+  on:
+    branch: source
+
+branches:
+  only:
+    - source
+
+cache:
+  directories:
+    - node_modules
+
+env:
+ global:
+   - GH_REF=github.com:atomoo/atomoo.github.io.git
