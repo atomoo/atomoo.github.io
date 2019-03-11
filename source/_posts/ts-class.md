@@ -1,5 +1,5 @@
 ---
-title: 遍历 class 中的属性
+title: 通过类创建对象，遍历对象的属性
 date: 2019-03-11 10:51:58
 tags:
 - TypeScript
