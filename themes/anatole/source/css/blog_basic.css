@@ -70,7 +70,7 @@ figure.highlight .code pre {
   margin: 0!important
 }
 
-figure.highlight.html .code:after,figure.highlight.js .code:after,figure.highlight.bash .code:after,figure.highlight.css .code:after,figure.highlight.scss .code:after,figure.highlight.diff .code:after,figure.highlight.java .code:after,figure.highlight.xml .code:after,figure.highlight.python .code:after,figure.highlight.json .code:after,figure.highlight.swift .code:after,figure.highlight.ruby .code:after,figure.highlight.perl .code:after,figure.highlight.php .code:after,figure.highlight.c .code:after,figure.highlight.cpp .code:after {
+figure.highlight.html .code:after,figure.highlight.js .code:after,figure.highlight.ts .code:after,figure.highlight.bash .code:after,figure.highlight.css .code:after,figure.highlight.scss .code:after,figure.highlight.diff .code:after,figure.highlight.java .code:after,figure.highlight.xml .code:after,figure.highlight.python .code:after,figure.highlight.json .code:after,figure.highlight.swift .code:after,figure.highlight.ruby .code:after,figure.highlight.perl .code:after,figure.highlight.php .code:after,figure.highlight.c .code:after,figure.highlight.cpp .code:after {
   position: absolute!important;
   top: 0!important;
   right: 0!important;
@@ -89,6 +89,10 @@ figure.highlight.html .code:after {
 
 figure.highlight.js .code:after {
   content: "JS"
+}
+
+figure.highlight.ts .code:after {
+  content: "TypeScript"
 }
 
 figure.highlight.bash .code:after {
