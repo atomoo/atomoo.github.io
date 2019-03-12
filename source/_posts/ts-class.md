@@ -47,4 +47,4 @@ class Person {
 let p = new Person('Shinji');
 ```
 但在使用`for...in`遍历的时候，发现和es5的输出差不多，其实是因为编译选项中将`target`设置为了`ES5`，编译后的代码和上面es5的代码差不多，所以`say`的`enumerable`为true，如果设置`target`为`ESNEXT`，则就和es6的表现差不多了。  
-总之，TypeScript和ES6的`class`并不一样，毕竟TypeScript还是需要编译成JavaScript的。
+总之，TypeScript和ES6的`class`并不一样，毕竟TypeScript还是需要编译成JavaScript的。但是如果是使用babel将ES6的`class`编译到es5，`say()`的`enumerable`会设置为`false`。
