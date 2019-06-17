@@ -23,8 +23,7 @@ steps:
 - script: 
     npm run generate
   displayName: 'generate hexo...'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: './public'
-    ArtifactName: 'page'
-    publishLocation: 'Container'
+
+- script: |
+    pwd
+
