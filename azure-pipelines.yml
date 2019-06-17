@@ -25,6 +25,12 @@ steps:
   displayName: 'generate hexo...'
 
 - script: 
-    git branch -a
+    cd public
+    git init
+    git add .
+    git config user.name 'azure'
+    git config user.email 'azure@auzre-pipelines'
+    git commit -m 'ci'
+    git push --force git@github.com:atomoo/atomoo.github.io.git HEAD:master
   displayName: 'deploy hexo'
 
