@@ -30,6 +30,8 @@ steps:
     cd public
     git init
     git add .
+    git config user.name "azure-bot"
+    git config user.email "azure-bot@vs"
     git commit -m 'auto deploy $(Build.BuildId)'
     git push --force https://$(GITHUB_GAT)@github.com/atomoo/atomoo.github.io.git HEAD:master
   displayName: 'deploy...'
