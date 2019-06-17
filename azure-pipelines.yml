@@ -24,3 +24,7 @@ steps:
     npm run generate
   displayName: 'generate hexo...'
 
+- script: 
+    npx hexo d
+  displayName: 'deploy hexo'
+
