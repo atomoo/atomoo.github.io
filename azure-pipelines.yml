@@ -5,6 +5,8 @@
 
 trigger:
 - source
+variables:
+- group: 'git'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -31,5 +33,5 @@ steps:
     git config user.emal 'azure-pipelines@vs'
     git add .
     git commit -m 'auto deploy $(Build.BuildId)'
-    git push --force https://$(git.GITHUB_GAT)@github.com/atomoo/atomoo.github.io.git HEAD:master
+    git push --force https://$(GITHUB_GAT)@github.com/atomoo/atomoo.github.io.git HEAD:master
   displayName: 'deploy...'
