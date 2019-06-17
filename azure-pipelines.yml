@@ -25,6 +25,5 @@ steps:
   displayName: 'generate hexo...'
 
 - script: 
-    git push
   displayName: 'deploy hexo'
 
