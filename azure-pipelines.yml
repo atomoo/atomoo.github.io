@@ -24,6 +24,11 @@ steps:
     npm run generate
   displayName: 'generate hexo...'
 
-- script: |
-    pwd
-
+- task: GitHubPagesPublish@1
+  inputs:
+    docPath: '$(System.DefaultWorkingDirectory)\public\*'
+    githubusername: 'atomoo'
+    githubaccesstoken: '$(git.GITHUB_PAT)'
+    repositoryname: 'atomoo.github.io'
+    branchname: 'master'
+    commitmessage: 'Automated Release $(Release.ReleaseId)'
