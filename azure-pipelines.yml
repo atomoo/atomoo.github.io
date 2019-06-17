@@ -20,6 +20,7 @@ steps:
 - script: |
     npm install
     npm run clean
+    ls -al themes/anatole/source
   displayName: 'npm install and clean'
 
 - script: 
