@@ -24,7 +24,7 @@ steps:
     npm run generate
   displayName: 'generate hexo...'
 
-- script: 
+- script: |
     cd ./public
     git init
     git add .
