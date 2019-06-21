@@ -1,5 +1,5 @@
 ---
-title: about
+title: ABOUT
 ---
 
 FE at Baidu Inc.
