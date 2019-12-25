@@ -1,1 +1,1 @@
-[![Build Status](https://atomoo.visualstudio.com/github-pages/_apis/build/status/atomoo.atomoo.github.io?branchName=source)](https://atomoo.visualstudio.com/github-pages/_build/latest?definitionId=1&branchName=source)
+![](https://github.com/atomoo/atomoo.github.io/workflows/HexoDeployCI/badge.svg)
