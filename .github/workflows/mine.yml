@@ -34,4 +34,4 @@ jobs:
         git config user.name "bot"
         git config user.email "actions@github.com"
         git commit -m 'auto deploy'
-        git push --force https://${{ secrets.GITHUB_TOKEN }}@github.com/atomoo/atomoo.github.io.git HEAD:master
+        git push --force https://${{github.actor}}:${{ secrets.GITHUB_TOKEN }}@github.com/atomoo/atomoo.github.io.git HEAD:master
