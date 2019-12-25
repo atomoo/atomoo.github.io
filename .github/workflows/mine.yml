@@ -1,0 +1,37 @@
+name: Node CI
+
+on:
+  push:
+    branches: 
+      - source
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, clean
+      run: |
+        npm install
+        npm run clean
+    - name: hexo generate...
+      run: npm run generate
+    - name: deploy
+      run: |
+        cd public
+        git init
+        git add .
+        git config user.name "bot"
+        git config user.email "actions@github.com"
+        git commit -m 'auto deploy'
+        git push --force https://${{ secrets.GITHUB_TOKEN }}@github.com/atomoo/atomoo.github.io.git HEAD:master
