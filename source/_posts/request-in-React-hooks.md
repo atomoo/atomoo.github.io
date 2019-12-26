@@ -3,6 +3,7 @@ title: request in React hooks
 date: 2019-12-24 11:00:09
 tags:
 - React
+- React Hooks
 ---
 只需要把 React 升级到 16.8+ 就可以在项目中使用到最新的 Hooks 功能。并且推荐在 eslint 中增加 eslint-plugin-react-hooks 插件协助检查 Hooks 的使用情况，但也不必完全参考 eslint-plugin-react-hooks 的提示对 deps 管理。  
 对于常用的 API ，通过查看官方文档基本都能掌握使用方法和使用场景。    
