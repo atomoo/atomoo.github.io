@@ -97,7 +97,7 @@ function List() {
 ```
 其实此处的 `useEffect` 和 `handleClickRefresh` 中的 deps 是可以去掉 `doFetchList` 的, `doFetchList`并不会有变化。    
 
-再进一步，可以把对 list 的增加删除等相关操作都可以写在 useDataList 里面，同时把请求的相关代码可以再抽取到一个 useRequest Hook，处理一些 response 的通用逻辑。
+再进一步，可以把对 list 的增加删除等相关操作都可以写在 useDataList 里面；对于请求操作中 loading error response 的相关代码可以提取一个 useRequest Hook，处理一些 response 的通用逻辑。
 
 ```js
 function useDataList(filter) {
