@@ -13,7 +13,6 @@ tags:
 通常对于项目中的异步请求获取数据的逻辑处理，会有一个公共的方法用来做统一的错误处理和参数格式化，以便于在组件中使用起来更方便。在 Hooks 项目中，同样也可以使用这样的逻辑，类似于：
 
 ```js
-
 function List() {
 
     const [data, setData] = useState([]);
@@ -53,7 +52,6 @@ function List() {
 ```
 这应该是最简单的实践方式，但是既然用了 hooks，对于 loading，error, response 的处理可以用一个自定义 hooks 封装起来。
 ```js
-
 function useDataList(filter) {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -127,4 +125,6 @@ function useDataList(filter) {
 }
 ```
 
-看了[这篇](https://www.zhihu.com/question/357020049/answer/909484669)回答后，发现还可以进行更深层次的封装。
+看了[这篇](https://www.zhihu.com/question/357020049/answer/909484669)回答后，发现还可以进行更深层次的封装。    
+    
+使用 hooks 之后感受比较深的就是状态的管理复用会方便很多，可能在原来对一个后台管理系统中展示用的 table 进行封装的时候，需要考虑各个ui的组件怎么封装已经 table 用到的数据之前的通信共享，现在有了hooks，可以将 ui 和状态管理更好地解耦，并且状态管理的 hooks 也能更方便地复用。
