@@ -16,4 +16,6 @@ ps：在绘制 graphic 元素的时候，避免使用点坐标去控制位置，
 第二步：  
 在 graphic 元素的 ondrag 方法中，根据获取到图形坐标，使用 [convertFromPixel](https://echarts.apache.org/zh/api.html#echartsInstance.convertFromPixel) 将图形坐标转为数据坐标信息，重新 setOption 更新 ECharts 信息。  
 第三步：  
-对于 EChart 的resize 或者 dataZoom 等会引起表格变化的事件，也要同步更新 graphic 元素的坐标 
+对于 EChart 的resize 或者 dataZoom 等会引起表格变化的事件，也要同步更新 graphic 元素的坐标，所以需要监听相关事件，在事件回调中，重新绘制 graphic 元素。  
+
+基本上都是这个套路，细节问题就得看具体情况了。  
